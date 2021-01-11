@@ -470,7 +470,7 @@ animation: unopa 1.2s linear infinite; opacity: 0;}
 
 
  
- @media screen and (min-width: 1700px) and (max-width : 1920px){
+ @media screen and (min-width: 1700px) and (max-width : 2600px){
     *{font-size: 18px;  font-family: 'Noto Sans KR', sans-serif; }
     
     .color-design .left-box{width: 0%; height: 340px; background-color: #8D6EFF; border-radius: 200px;
