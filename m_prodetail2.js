@@ -145,7 +145,9 @@ $(document).ready(function() {
 					   $('.accordions').find('.accordion-trigger').eq(i).attr('title', $('.accordions').find('.accordion-trigger').eq(i).data('fixedTitle'));
 				   }
 			   }
-			   $(this).attr('aria-expanded', true);
+			   setTimeout(function(){
+				$(this).attr('aria-expanded', true);
+			   },10)
 		   } else {
 			   $(this).attr('aria-expanded', false);
 		   }
