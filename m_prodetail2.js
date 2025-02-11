@@ -123,10 +123,9 @@ $(document).ready(function() {
 		   var btnTitle = $(this).parent().find('.seo-improve-heading').text();
 		   $(this).data('fixedTitle', btnTitle)
 		   
-		   $(this).attr('aria-label', btnTitle);
 			// $(this).parent().attr('role', 'button');
-			$(this).sibling('.seo-improve-heading').attr('aria-hidden', true);
-			// $(this).parent().attr('aria-expanded', false);
+			$(this).attr('aria-expanded', false);
+		   $(this).siblings('.seo-improve-heading').attr('aria-hidden', 'hidden');
 			$(this).attr('title', $(this).data('fixedTitle'));
 	   } else {
 		   $('.accordions').find('.accordion-trigger').attr('title','닫힘');
@@ -145,9 +144,7 @@ $(document).ready(function() {
 					   $('.accordions').find('.accordion-trigger').eq(i).attr('title', $('.accordions').find('.accordion-trigger').eq(i).data('fixedTitle'));
 				   }
 			   }
-			   setTimeout(function(){
-				$(this).attr('aria-expanded', true);
-			   },10)
+			   $(this).attr('aria-expanded', true);
 		   } else {
 			   $(this).attr('aria-expanded', false);
 		   }
