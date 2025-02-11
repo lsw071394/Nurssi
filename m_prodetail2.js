@@ -132,6 +132,10 @@ $(document).ready(function() {
    });
 
 	$('.accordions').find('.accordion-trigger').on('click', function (e) {
+		if (e.type === "keydown" && (e.key !== "Enter" && e.key !== " ")) {
+            return;
+        }
+		
 	   e.preventDefault();
 	   var thisTxtCheck = $(this).hasClass('active');
 	   if($(this).parent().length > 0 && $(this).parent().find('.seo-improve-heading').length > 0) {
