@@ -131,7 +131,7 @@ $(document).ready(function() {
 	   }
    });
 
-	$('.accordions').find('.accordion-trigger').on('click', function (e) {
+	$('.accordions').find('.accordion-trigger').on('click keydown', function (e) {
 		if (e.type === "keydown" && (e.key !== "Enter" && e.key !== " ")) {
             return;
         }
