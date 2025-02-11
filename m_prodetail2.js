@@ -123,6 +123,7 @@ $(document).ready(function() {
 		   var btnTitle = $(this).parent().find('.seo-improve-heading').text();
 		   $(this).data('fixedTitle', btnTitle)
 		   
+		   $(this).attr('aria-label', btnTitle);
 			// $(this).parent().attr('role', 'button');
 			$(this).sibling('.seo-improve-heading').attr('aria-hidden', true);
 			// $(this).parent().attr('aria-expanded', false);
