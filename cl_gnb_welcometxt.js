@@ -1,0 +1,1 @@
+var cfmGnbWelcomeTxtJson = [{"imgPath":"","statInfo":"^mKT-개인_공통^GNB^바로가기메뉴^인사말^","showYn":"Y","htmlInfo":"{이름}님 좋은하루 되세요!","showPerdType":"01","showSdate":"2021/11/17/09/40/02","showEdate":"9999/12/31/23/59/59","newWndwType":"01","mblNewWndwType":"01","contsDivType":"01"}]
