@@ -123,33 +123,30 @@ $(document).ready(function() {
 		   var btnTitle = $(this).parent().find('.seo-improve-heading').text();
 		   $(this).data('fixedTitle', btnTitle)
 		   
-			$(this).parent().attr('role', 'button');
-			$(this).parent().attr('aria-expanded', false);
+			// $(this).parent().attr('role', 'button');
+			$(this).sibling('.seo-improve-heading').attr('aria-hidden', true);
+			// $(this).parent().attr('aria-expanded', false);
 			$(this).attr('title', $(this).data('fixedTitle'));
 	   } else {
 		   $('.accordions').find('.accordion-trigger').attr('title','닫힘');
 	   }
    });
 
-	$('.accordions').find('.accordion-trigger').on('click keydown', function (e) {
-		if (e.type === "keydown" && (e.key !== "Enter" && e.key !== " ")) {
-            return;
-        }
-		
+	$('.accordions').find('.accordion-trigger').on('click', function (e) {
 	   e.preventDefault();
 	   var thisTxtCheck = $(this).hasClass('active');
 	   if($(this).parent().length > 0 && $(this).parent().find('.seo-improve-heading').length > 0) {
 		   $(this).attr('title', $(this).data('fixedTitle'));
 		   if (thisTxtCheck == true) {
-			   $('.accordions').find('.accordion-trigger').parent().attr('aria-expanded', false);
+			   $('.accordions').find('.accordion-trigger').attr('aria-expanded', false);
 			   for(var i=0; i < $('.accordions').find('.accordion-trigger').length; i++) {
 				   if($(this).data('fixedTitle')) {
 					   $('.accordions').find('.accordion-trigger').eq(i).attr('title', $('.accordions').find('.accordion-trigger').eq(i).data('fixedTitle'));
 				   }
 			   }
-			   $(this).parent().attr('aria-expanded', true);
+			   $(this).attr('aria-expanded', true);
 		   } else {
-			   $(this).parent().attr('aria-expanded', false);
+			   $(this).attr('aria-expanded', false);
 		   }
 	   } else {
 		  if (thisTxtCheck == true) {
